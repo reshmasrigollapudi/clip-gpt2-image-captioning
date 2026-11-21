@@ -1,0 +1,192 @@
+Run started 2026-11-18 20:05:05 on cuda
+Config: {"injection": "prefix", "prefix_length": 10, "finetune_gpt2": true, "epochs": 5, "batch_size": 32, "lr_mapper": 0.0002, "lr_gpt2": 3e-05, "weight_decay": 0.01, "warmup_steps": 300, "grad_clip": 1.0, "max_caption_tokens": 40, "val_fraction": 0.1, "log_every": 50, "num_sample_images": 8, "eval_images": 200, "max_gen_tokens": 30, "save_checkpoint": true}
+Loaded 5000 CLIP embeddings (dim 512), 25013 captions
+Embedding norm check: 1.0000
+Image alignment check: 200/200 match -> images available
+Train: 4500 images / 22512 captions / 704 batches
+Val:   500 images / 2501 captions / 79 batches
+Injection: prefix | prefix length 10 | GPT-2 fine-tuned: True
+Params: mapper 31.5M | GPT-2 124.4M | trainable 155.9M
+Sanity batch: clip (32, 512) -> visual tokens (2, 10, 768) | captions (32, 24) | initial loss 9.603
+Sample image ids: [149, 599, 1293, 1670, 2223, 3382, 3773, 4866] | downloaded 8/8
+==========================================================================================
+BASELINE (epoch 0, untrained mapper) | val loss 9.8386 | val ppl 18742.7
+  [img 149] GEN: be a "t-1-in-the-game" (t-1-in-the-game) for the first time.
+  [img 149] REF: a fully stocked refrigerator with the door wide open
+  [img 599] GEN: (1) the "A-1-1-1-1-1-1-1-1-1-1-1-1
+  [img 599] REF: large group of people sitting in a room working on their computers
+  [img 1293] GEN: (1) the "A-1-1-1-1-1-1-1-1-1-1-1-1
+  [img 1293] REF: an extremely large hamburger with a salad and fried on a table
+  [img 1670] GEN: be the first-in-name-of-the-name-of-the-name-of-the-name-of-the-
+  [img 1670] REF: a bunch of people walk along with an elephant on a street
+  [img 2223] GEN: (1) the "M-1-1-1-1-1-1-1-1-1-1-1-1
+  [img 2223] REF: a group of people getting on to a bus
+  [img 3382] GEN: be a "t-1-in-the-game" (t-1-in-the-game) (t-1-in
+  [img 3382] REF: two dogs stand in a kitchen beneath their owner
+  [img 3773] GEN: (1) the "M-1-1-1-1-1-1-1-1-1-1-1-1
+  [img 3773] REF: a person is playing a tennis game by himself
+  [img 4866] GEN: (1) the first-in-name-of-a-name-of-a-name-of-a-name-of-
+  [img 4866] REF: two woman holding tennis rackets posing for a photo
+==========================================================================================
+epoch 1 | step   50/704 | loss 5.6508 | lr 5.10e-06 | 8s
+epoch 1 | step  100/704 | loss 3.3707 | lr 1.01e-05 | 16s
+epoch 1 | step  150/704 | loss 3.0833 | lr 1.51e-05 | 24s
+epoch 1 | step  200/704 | loss 2.8580 | lr 2.01e-05 | 33s
+epoch 1 | step  250/704 | loss 2.7676 | lr 2.51e-05 | 41s
+epoch 1 | step  300/704 | loss 2.6815 | lr 3.00e-05 | 49s
+epoch 1 | step  350/704 | loss 2.6460 | lr 2.95e-05 | 57s
+epoch 1 | step  400/704 | loss 2.5930 | lr 2.91e-05 | 65s
+epoch 1 | step  450/704 | loss 2.5671 | lr 2.86e-05 | 74s
+epoch 1 | step  500/704 | loss 2.5458 | lr 2.81e-05 | 82s
+epoch 1 | step  550/704 | loss 2.5880 | lr 2.77e-05 | 90s
+epoch 1 | step  600/704 | loss 2.4898 | lr 2.72e-05 | 99s
+epoch 1 | step  650/704 | loss 2.4936 | lr 2.67e-05 | 107s
+epoch 1 | step  700/704 | loss 2.4516 | lr 2.63e-05 | 115s
+epoch 1 | step  704/704 | loss 2.4975 | lr 2.62e-05 | 116s
+------------------------------------------------------------------------------------------
+EPOCH 1 DONE | train loss 2.9110 | val loss 2.4534 | val ppl 11.63 | 123s
+  [img 149] a refrigerator with a bunch of food on it
+  [img 599] a group of people are sitting at a table with laptops
+  [img 1293] a plate of food with a sandwich and a drink
+  new best val loss, checkpoint saved to milestone2_output/best_model.pt
+------------------------------------------------------------------------------------------
+epoch 2 | step   50/704 | loss 2.3525 | lr 2.58e-05 | 8s
+epoch 2 | step  100/704 | loss 2.3612 | lr 2.53e-05 | 17s
+epoch 2 | step  150/704 | loss 2.3168 | lr 2.48e-05 | 25s
+epoch 2 | step  200/704 | loss 2.3439 | lr 2.44e-05 | 33s
+epoch 2 | step  250/704 | loss 2.3451 | lr 2.39e-05 | 41s
+epoch 2 | step  300/704 | loss 2.3304 | lr 2.34e-05 | 50s
+epoch 2 | step  350/704 | loss 2.3006 | lr 2.30e-05 | 58s
+epoch 2 | step  400/704 | loss 2.2876 | lr 2.25e-05 | 66s
+epoch 2 | step  450/704 | loss 2.3130 | lr 2.20e-05 | 75s
+epoch 2 | step  500/704 | loss 2.2598 | lr 2.16e-05 | 83s
+epoch 2 | step  550/704 | loss 2.2960 | lr 2.11e-05 | 91s
+epoch 2 | step  600/704 | loss 2.2585 | lr 2.06e-05 | 100s
+epoch 2 | step  650/704 | loss 2.3203 | lr 2.02e-05 | 108s
+epoch 2 | step  700/704 | loss 2.2661 | lr 1.97e-05 | 117s
+epoch 2 | step  704/704 | loss 2.2433 | lr 1.97e-05 | 117s
+------------------------------------------------------------------------------------------
+EPOCH 2 DONE | train loss 2.3105 | val loss 2.3719 | val ppl 10.72 | 124s
+  [img 149] a refrigerator with a bunch of food in it
+  [img 599] a group of people are standing around a conference room
+  [img 1293] a sandwich with fries and a glass of wine
+  new best val loss, checkpoint saved to milestone2_output/best_model.pt
+------------------------------------------------------------------------------------------
+epoch 3 | step   50/704 | loss 2.1301 | lr 1.92e-05 | 8s
+epoch 3 | step  100/704 | loss 2.1284 | lr 1.87e-05 | 17s
+epoch 3 | step  150/704 | loss 2.1480 | lr 1.83e-05 | 25s
+epoch 3 | step  200/704 | loss 2.1678 | lr 1.78e-05 | 33s
+epoch 3 | step  250/704 | loss 2.1263 | lr 1.73e-05 | 42s
+epoch 3 | step  300/704 | loss 2.1413 | lr 1.69e-05 | 50s
+epoch 3 | step  350/704 | loss 2.1613 | lr 1.64e-05 | 58s
+epoch 3 | step  400/704 | loss 2.1401 | lr 1.60e-05 | 66s
+epoch 3 | step  450/704 | loss 2.1414 | lr 1.55e-05 | 75s
+epoch 3 | step  500/704 | loss 2.1328 | lr 1.50e-05 | 83s
+epoch 3 | step  550/704 | loss 2.1296 | lr 1.46e-05 | 92s
+epoch 3 | step  600/704 | loss 2.1077 | lr 1.41e-05 | 100s
+epoch 3 | step  650/704 | loss 2.1444 | lr 1.36e-05 | 108s
+epoch 3 | step  700/704 | loss 2.1182 | lr 1.32e-05 | 117s
+epoch 3 | step  704/704 | loss 2.0409 | lr 1.31e-05 | 117s
+------------------------------------------------------------------------------------------
+EPOCH 3 DONE | train loss 2.1364 | val loss 2.3609 | val ppl 10.60 | 124s
+  [img 149] a refrigerator with a bunch of different foods on it
+  [img 599] a group of people standing around a large conference room
+  [img 1293] a sandwich and a drink on a table
+  new best val loss, checkpoint saved to milestone2_output/best_model.pt
+------------------------------------------------------------------------------------------
+epoch 4 | step   50/704 | loss 2.0066 | lr 1.27e-05 | 8s
+epoch 4 | step  100/704 | loss 2.0146 | lr 1.22e-05 | 17s
+epoch 4 | step  150/704 | loss 1.9821 | lr 1.17e-05 | 25s
+epoch 4 | step  200/704 | loss 2.0414 | lr 1.13e-05 | 33s
+epoch 4 | step  250/704 | loss 2.0196 | lr 1.08e-05 | 42s
+epoch 4 | step  300/704 | loss 2.0367 | lr 1.03e-05 | 50s
+epoch 4 | step  350/704 | loss 1.9984 | lr 9.86e-06 | 58s
+epoch 4 | step  400/704 | loss 2.0500 | lr 9.39e-06 | 67s
+epoch 4 | step  450/704 | loss 1.9934 | lr 8.93e-06 | 75s
+epoch 4 | step  500/704 | loss 2.0311 | lr 8.46e-06 | 83s
+epoch 4 | step  550/704 | loss 1.9899 | lr 7.99e-06 | 92s
+epoch 4 | step  600/704 | loss 2.0096 | lr 7.53e-06 | 100s
+epoch 4 | step  650/704 | loss 2.0049 | lr 7.06e-06 | 108s
+epoch 4 | step  700/704 | loss 2.0210 | lr 6.60e-06 | 117s
+epoch 4 | step  704/704 | loss 2.0899 | lr 6.56e-06 | 117s
+------------------------------------------------------------------------------------------
+EPOCH 4 DONE | train loss 2.0147 | val loss 2.3555 | val ppl 10.54 | 124s
+  [img 149] a refrigerator with a bunch of different foods in it
+  [img 599] a group of people standing around a conference room
+  [img 1293] a sandwich and a drink on a plate
+  new best val loss, checkpoint saved to milestone2_output/best_model.pt
+------------------------------------------------------------------------------------------
+epoch 5 | step   50/704 | loss 1.9179 | lr 6.09e-06 | 8s
+epoch 5 | step  100/704 | loss 1.9442 | lr 5.63e-06 | 17s
+epoch 5 | step  150/704 | loss 1.9282 | lr 5.16e-06 | 25s
+epoch 5 | step  200/704 | loss 1.9080 | lr 4.70e-06 | 33s
+epoch 5 | step  250/704 | loss 1.8888 | lr 4.23e-06 | 42s
+epoch 5 | step  300/704 | loss 1.8995 | lr 3.76e-06 | 50s
+epoch 5 | step  350/704 | loss 1.9327 | lr 3.30e-06 | 58s
+epoch 5 | step  400/704 | loss 1.9394 | lr 2.83e-06 | 67s
+epoch 5 | step  450/704 | loss 1.9027 | lr 2.37e-06 | 75s
+epoch 5 | step  500/704 | loss 1.9105 | lr 1.90e-06 | 83s
+epoch 5 | step  550/704 | loss 1.9185 | lr 1.43e-06 | 92s
+epoch 5 | step  600/704 | loss 1.9568 | lr 9.69e-07 | 100s
+epoch 5 | step  650/704 | loss 1.9393 | lr 5.03e-07 | 108s
+epoch 5 | step  700/704 | loss 1.9318 | lr 3.73e-08 | 117s
+epoch 5 | step  704/704 | loss 1.9785 | lr 0.00e+00 | 117s
+------------------------------------------------------------------------------------------
+EPOCH 5 DONE | train loss 1.9231 | val loss 2.3728 | val ppl 10.73 | 124s
+  [img 149] a refrigerator with a bunch of different foods in it
+  [img 599] a group of people standing around a conference room
+  [img 1293] a sandwich and a drink sit on a plate
+------------------------------------------------------------------------------------------
+Training finished in 10.4 min | best epoch 4 (val loss 2.3555)
+Reloaded best checkpoint (epoch 4) for decoding experiments
+==========================================================================================
+EARLY CAPTION SAMPLES (best checkpoint)
+[img 149] REF: a fully stocked refrigerator with the door wide open
+    Greedy                   a refrigerator with a bunch of different foods in it
+    Beam (k=3)               a refrigerator filled with lots of fresh produce
+    Beam (k=5)               a refrigerator with a bunch of different foods in it
+    Nucleus (p=0.9, T=0.7)   a refrigerator filled with fresh vegetables and other foods
+    Nucleus (p=0.9, T=1.0)   a refrigerator in a long, white refrigerator
+[img 599] REF: large group of people sitting in a room working on their computers
+    Greedy                   a group of people standing around a conference room
+    Beam (k=3)               a large group of people in a conference room
+    Beam (k=5)               a large group of people in a conference room
+    Nucleus (p=0.9, T=0.7)   a lot of people are gathered around a table
+    Nucleus (p=0.9, T=1.0)   a crowded lot of people gathered around a video game event
+[img 1293] REF: an extremely large hamburger with a salad and fried on a table
+    Greedy                   a sandwich and a drink on a plate
+    Beam (k=3)               a plate of food on a table with a glass of beer
+    Beam (k=5)               a plate of food sits on top of a table
+    Nucleus (p=0.9, T=0.7)   a plate topped with a sandwich and a glass of wine
+    Nucleus (p=0.9, T=1.0)   a plate topped with a roast beef sandwich with fries on a bun
+[img 1670] REF: a bunch of people walk along with an elephant on a street
+    Greedy                   a group of people walking down a street with a bunch of people riding on their backs
+    Beam (k=3)               a group of people riding on the back of an elephant
+    Beam (k=5)               a group of people riding on the back of an elephant
+    Nucleus (p=0.9, T=0.7)   a group of people walking down the street with an elephant
+    Nucleus (p=0.9, T=1.0)   a parade of people walk down the road
+[img 2223] REF: a group of people getting on to a bus
+    Greedy                   a group of people on a bus in a city
+    Beam (k=3)               a group of people on a city street
+    Beam (k=5)               a group of people on a city street
+    Nucleus (p=0.9, T=0.7)   a group of people on a bus that is parked next to a tree
+    Nucleus (p=0.9, T=1.0)   a group of people on a city street
+[img 3382] REF: two dogs stand in a kitchen beneath their owner
+    Greedy                   two dogs standing in a kitchen doorway
+    Beam (k=3)               a couple of dogs standing in a kitchen
+    Beam (k=5)               a couple of dogs standing next to each other
+    Nucleus (p=0.9, T=0.7)   two dogs standing in a kitchen next to a kitchen sink
+    Nucleus (p=0.9, T=1.0)   two dogs wait at the kitchen sink while a person walks in the doorway
+[img 3773] REF: a person is playing a tennis game by himself
+    Greedy                   a woman is playing tennis on a tennis court
+    Beam (k=3)               a woman on a tennis court holding a tennis racket
+    Beam (k=5)               a woman on a tennis court holding a tennis racket
+    Nucleus (p=0.9, T=0.7)   a woman in a shirt and shorts holding a tennis racket
+    Nucleus (p=0.9, T=1.0)   a woman swings a tennis racket at the bat
+[img 4866] REF: two woman holding tennis rackets posing for a photo
+    Greedy                   two women are playing tennis on a court
+    Beam (k=3)               two girls are playing tennis on a court
+    Beam (k=5)               two women standing next to each other holding tennis racquets
+    Nucleus (p=0.9, T=0.7)   two girls playing tennis on a court
+    Nucleus (p=0.9, T=1.0)   two young girls on a tennis court with a racket
+==========================================================================================

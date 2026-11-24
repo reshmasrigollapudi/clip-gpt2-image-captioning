@@ -1,0 +1,310 @@
+{
+  "decoding_metrics": {
+    "Greedy": {
+      "BLEU-1": 0.7501574589394462,
+      "BLEU-2": 0.5941862917994639,
+      "BLEU-3": 0.4489526659466553,
+      "BLEU-4": 0.3365545705910791,
+      "METEOR": 0.4990874238625549,
+      "CIDEr": 1.1514633557251568,
+      "ROUGE-L": 0.565516295732057,
+      "Time (s)": 47.6
+    },
+    "Beam (k=3)": {
+      "BLEU-1": 0.4632129225035101,
+      "BLEU-2": 0.3511493030939928,
+      "BLEU-3": 0.2404647789855408,
+      "BLEU-4": 0.15470161205168553,
+      "METEOR": 0.34251940845438994,
+      "CIDEr": 0.6870417699646245,
+      "ROUGE-L": 0.4836941209433948,
+      "Time (s)": 89.1
+    },
+    "Beam (k=5)": {
+      "BLEU-1": 0.37828292097774796,
+      "BLEU-2": 0.27946872845435305,
+      "BLEU-3": 0.18747739839889815,
+      "BLEU-4": 0.1144422143866224,
+      "METEOR": 0.2851658918332761,
+      "CIDEr": 0.519145440170517,
+      "ROUGE-L": 0.4382415166090158,
+      "Time (s)": 168.1
+    },
+    "Nucleus (p=0.9, T=0.7)": {
+      "BLEU-1": 0.6968390804596271,
+      "BLEU-2": 0.5211478711819231,
+      "BLEU-3": 0.374198805163595,
+      "BLEU-4": 0.2638721492005144,
+      "METEOR": 0.46742396168961353,
+      "CIDEr": 0.99199203853277,
+      "ROUGE-L": 0.5222884440727664,
+      "Time (s)": 53.9
+    },
+    "Nucleus (p=0.9, T=1.0)": {
+      "BLEU-1": 0.6095545252971961,
+      "BLEU-2": 0.4150952001602197,
+      "BLEU-3": 0.2720761815788273,
+      "BLEU-4": 0.176296834796958,
+      "METEOR": 0.3979376350745806,
+      "CIDEr": 0.7049712681150632,
+      "ROUGE-L": 0.45078882659388614,
+      "Time (s)": 53.3
+    }
+  },
+  "temperature_sweep": {
+    "0.3": {
+      "BLEU-1": 0.738648126308544,
+      "BLEU-2": 0.5779149784419707,
+      "BLEU-3": 0.4308024134252158,
+      "BLEU-4": 0.31853932085047787,
+      "METEOR": 0.49624590371599364,
+      "CIDEr": 1.1360550611438553,
+      "ROUGE-L": 0.5574354326349978
+    },
+    "0.5": {
+      "BLEU-1": 0.729736973962687,
+      "BLEU-2": 0.5625895914020781,
+      "BLEU-3": 0.4116836013211781,
+      "BLEU-4": 0.29989486285950673,
+      "METEOR": 0.48319371632660213,
+      "CIDEr": 1.0563717741277525,
+      "ROUGE-L": 0.5405069774904725
+    },
+    "0.7": {
+      "BLEU-1": 0.6832689571049637,
+      "BLEU-2": 0.5055571663507246,
+      "BLEU-3": 0.3579097542036198,
+      "BLEU-4": 0.2549370840719672,
+      "METEOR": 0.46465665410528334,
+      "CIDEr": 0.9375782847436482,
+      "ROUGE-L": 0.5215926929232206
+    },
+    "0.9": {
+      "BLEU-1": 0.638826644937739,
+      "BLEU-2": 0.4526329504965367,
+      "BLEU-3": 0.3060586531958197,
+      "BLEU-4": 0.20716089351010633,
+      "METEOR": 0.4200953770653965,
+      "CIDEr": 0.8003167975783267,
+      "ROUGE-L": 0.476101488710625
+    },
+    "1.0": {
+      "BLEU-1": 0.6077481840192478,
+      "BLEU-2": 0.4094163529169197,
+      "BLEU-3": 0.26636039409106266,
+      "BLEU-4": 0.1703487626415668,
+      "METEOR": 0.40177048220935024,
+      "CIDEr": 0.7318607874666767,
+      "ROUGE-L": 0.4547415388855608
+    },
+    "1.2": {
+      "BLEU-1": 0.5110251450675993,
+      "BLEU-2": 0.3103159016447177,
+      "BLEU-3": 0.1791528760824863,
+      "BLEU-4": 0.10269892782384199,
+      "METEOR": 0.3327637303920933,
+      "CIDEr": 0.5134639513850311,
+      "ROUGE-L": 0.3837341074588942
+    }
+  },
+  "beam_width_sweep": {
+    "1": {
+      "BLEU-1": 0.7501574589394462,
+      "BLEU-2": 0.5941862917994639,
+      "BLEU-3": 0.4489526659466553,
+      "BLEU-4": 0.3365545705910791,
+      "METEOR": 0.4990874238625549,
+      "CIDEr": 1.1514633557251568,
+      "ROUGE-L": 0.565516295732057,
+      "Time (s)": 46.0
+    },
+    "2": {
+      "BLEU-1": 0.5725920297630903,
+      "BLEU-2": 0.4355311707195545,
+      "BLEU-3": 0.30463333034780143,
+      "BLEU-4": 0.20396612694596325,
+      "METEOR": 0.39113446136743585,
+      "CIDEr": 0.8281993523685227,
+      "ROUGE-L": 0.5139061147113926,
+      "Time (s)": 67.1
+    },
+    "3": {
+      "BLEU-1": 0.4632129225035101,
+      "BLEU-2": 0.3511493030939928,
+      "BLEU-3": 0.2404647789855408,
+      "BLEU-4": 0.15470161205168553,
+      "METEOR": 0.34251940845438994,
+      "CIDEr": 0.6870417699646245,
+      "ROUGE-L": 0.4836941209433948,
+      "Time (s)": 89.0
+    },
+    "5": {
+      "BLEU-1": 0.37828292097774796,
+      "BLEU-2": 0.27946872845435305,
+      "BLEU-3": 0.18747739839889815,
+      "BLEU-4": 0.1144422143866224,
+      "METEOR": 0.2851658918332761,
+      "CIDEr": 0.519145440170517,
+      "ROUGE-L": 0.4382415166090158,
+      "Time (s)": 164.2
+    },
+    "7": {
+      "BLEU-1": 0.3744371773221836,
+      "BLEU-2": 0.26140279378957715,
+      "BLEU-3": 0.16455660949890757,
+      "BLEU-4": 0.0935383951709857,
+      "METEOR": 0.2561021691203769,
+      "CIDEr": 0.4325442988869863,
+      "ROUGE-L": 0.3984120701773898,
+      "Time (s)": 311.8
+    },
+    "10": {
+      "BLEU-1": 0.31458437033344705,
+      "BLEU-2": 0.2024370904298352,
+      "BLEU-3": 0.11403985118648977,
+      "BLEU-4": 0.05866160011698269,
+      "METEOR": 0.22926100350986933,
+      "CIDEr": 0.2890815857026871,
+      "ROUGE-L": 0.3382405336673543,
+      "Time (s)": 680.4
+    }
+  },
+  "finetuning_comparison": {
+    "Full Fine-Tuning": {
+      "BLEU-1": 0.7501574589394462,
+      "BLEU-2": 0.5941862917994639,
+      "BLEU-3": 0.4489526659466553,
+      "BLEU-4": 0.3365545705910791,
+      "METEOR": 0.4990874238625549,
+      "CIDEr": 1.1514633557251568,
+      "ROUGE-L": 0.565516295732057,
+      "Trainable Params": 155908608.0,
+      "Val Loss": 0.0
+    },
+    "Prefix Tuning Only": {
+      "BLEU-1": 0.32780612244895635,
+      "BLEU-2": 0.2183084052989208,
+      "BLEU-3": 0.1361922075611556,
+      "BLEU-4": 0.08291750102965363,
+      "METEOR": 0.36767656632798607,
+      "CIDEr": 0.010175951705529528,
+      "ROUGE-L": 0.30662432833360387,
+      "Trainable Params": 31468800.0,
+      "Val Loss": 2.8201858212676227
+    },
+    "LoRA (r=8)": {
+      "BLEU-1": 0.32370475514547026,
+      "BLEU-2": 0.21323955885535953,
+      "BLEU-3": 0.13225843450242797,
+      "BLEU-4": 0.07900326975382724,
+      "METEOR": 0.3710880022919504,
+      "CIDEr": 0.009712089102784259,
+      "ROUGE-L": 0.31170913470332134,
+      "Trainable Params": 31468800.0,
+      "Val Loss": 2.8176933994776086
+    }
+  },
+  "vizwiz_metrics": null,
+  "vizwiz_sample_captions": [
+    {
+      "index": 5238,
+      "caption": "a yellow and white sign with a cell phone",
+      "references": []
+    },
+    {
+      "index": 912,
+      "caption": "a person taking a shake of a banana and a glass of milk",
+      "references": []
+    },
+    {
+      "index": 204,
+      "caption": "a glass of wine sitting on a table",
+      "references": []
+    },
+    {
+      "index": 6074,
+      "caption": "a pair of white pants and a pair of white shirts",
+      "references": []
+    },
+    {
+      "index": 2253,
+      "caption": "a white cloth is sitting on a white table",
+      "references": []
+    },
+    {
+      "index": 2006,
+      "caption": "a white bottle sitting on top of a counter",
+      "references": []
+    },
+    {
+      "index": 1828,
+      "caption": "a man in a white shirt is standing in front of a brick wall",
+      "references": []
+    },
+    {
+      "index": 1143,
+      "caption": "a small bed with a blanket on it",
+      "references": []
+    },
+    {
+      "index": 6033,
+      "caption": "a white plate with a pen and a computer mouse",
+      "references": []
+    },
+    {
+      "index": 839,
+      "caption": "a box of donuts on a table next to a banana",
+      "references": []
+    },
+    {
+      "index": 5543,
+      "caption": "a glass of water sitting on top of a table",
+      "references": []
+    },
+    {
+      "index": 6067,
+      "caption": "a white bowl with a white vase on it",
+      "references": []
+    },
+    {
+      "index": 7308,
+      "caption": "a glass of wine sitting on a table",
+      "references": []
+    },
+    {
+      "index": 4467,
+      "caption": "a woman with a red headband sits on a bench",
+      "references": []
+    },
+    {
+      "index": 712,
+      "caption": "a colorful pillows are on a table",
+      "references": []
+    },
+    {
+      "index": 4837,
+      "caption": "a laptop is sitting on a table",
+      "references": []
+    },
+    {
+      "index": 3456,
+      "caption": "a dog laying on a bed with a cat on it",
+      "references": []
+    },
+    {
+      "index": 260,
+      "caption": "a phone is on a table with a computer",
+      "references": []
+    },
+    {
+      "index": 244,
+      "caption": "a man sitting on a couch with a stuffed animal",
+      "references": []
+    },
+    {
+      "index": 767,
+      "caption": "a box of milk and a box of ice cream",
+      "references": []
+    }
+  ]
+}
